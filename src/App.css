@@ -8,16 +8,24 @@
 
 .App {
   width: 100vw;
-  height: 100vh;
-  position: fixed;
+  min-height: 100vh;
+  position: relative;
   top: 0;
   left: 0;
   background: radial-gradient(ellipse at center, #2d1a1a 0%, #1a0f0f 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
 .center-content {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -32,7 +40,7 @@
 }
 
 .top-text-content {
-  position: fixed;
+  position: absolute;
   top: 0%;
   left: 50%;
   transform: translateX(-50%);
@@ -55,7 +63,7 @@
 }
 
 .bottom-ombre {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -63,4 +71,28 @@
   background: linear-gradient(to top, #000000 0%, transparent 100%);
   pointer-events: none;
   z-index: 699;
+}
+
+.top-ombre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 699;
+}
+.section-one {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-one-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
