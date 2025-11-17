@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/IE-Landing/static/css/main.bea000d1.css",
+    "main.js": "/IE-Landing/static/js/main.4d8c7f62.js",
+    "static/media/Epos-Normal.woff": "/IE-Landing/static/media/Epos-Normal.afa5481169555abf12aa.woff",
+    "static/media/Epos-Normal.woff2": "/IE-Landing/static/media/Epos-Normal.933e4416a9cc666c1f37.woff2",
+    "index.html": "/IE-Landing/index.html",
+    "main.bea000d1.css.map": "/IE-Landing/static/css/main.bea000d1.css.map",
+    "main.4d8c7f62.js.map": "/IE-Landing/static/js/main.4d8c7f62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bea000d1.css",
+    "static/js/main.4d8c7f62.js"
+  ]
+}

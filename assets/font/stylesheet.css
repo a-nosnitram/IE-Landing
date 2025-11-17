@@ -1,0 +1,36 @@
+/* @font-face {
+    font-family: 'Epos Normal';
+    src: url('Epos-Normal.eot');
+    src: local('Epos Normal'), local('Epos-Normal'),
+        url('Epos-Normal.eot?#iefix') format('embedded-opentype'),
+        url('Epos-Normal.woff2') format('woff2'),
+        url('Epos-Normal.woff') format('woff'),
+        url('Epos-Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Epos';
+    src: url('Epos-Medium.eot');
+    src: local('Epos Medium'), local('Epos-Medium'),
+        url('Epos-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Epos-Medium.woff2') format('woff2'),
+        url('Epos-Medium.woff') format('woff'),
+        url('Epos-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Epos Condensed';
+    src: url('Epos-Condensed.eot');
+    src: local('Epos Condensed'), local('Epos-Condensed'),
+        url('Epos-Condensed.eot?#iefix') format('embedded-opentype'),
+        url('Epos-Condensed.woff2') format('woff2'),
+        url('Epos-Condensed.woff') format('woff'),
+        url('Epos-Condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ */
