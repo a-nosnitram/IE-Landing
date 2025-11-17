@@ -1,12 +1,13 @@
 .cursor-light {
   position: fixed;
   pointer-events: none;
-  z-index: 599;
+  z-index: 1000;
   width: 300px;
   height: 300px;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
   opacity: 0;
+  mix-blend-mode: difference;
 }
 
 .cursor-light::before {
