@@ -95,13 +95,14 @@ const Eye = React.memo(({ x, y, size, rotation, opacity }) => {
       { rootMargin: "50px" }
     );
 
-    if (eyeRef.current) {
-      observer.observe(eyeRef.current);
+    const currentEyeRef = eyeRef.current;
+    if (currentEyeRef) {
+      observer.observe(currentEyeRef);
     }
 
     return () => {
-      if (eyeRef.current) {
-        observer.unobserve(eyeRef.current);
+      if (currentEyeRef) {
+        observer.unobserve(currentEyeRef);
       }
     };
   }, []);

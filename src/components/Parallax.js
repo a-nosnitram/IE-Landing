@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Parallax.css";
 
 const Parallax = ({ children, speed = 0.05, className = "" , maxMove = 100 }) => {
@@ -20,7 +20,7 @@ const Parallax = ({ children, speed = 0.05, className = "" , maxMove = 100 }) =>
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [speed]);
+  }, [speed, maxMove]);
 
   return (
     <div
