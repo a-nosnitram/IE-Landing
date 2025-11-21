@@ -8,6 +8,7 @@ import Parallax from "./components/Parallax";
 import { MouseProvider } from "./context/MouseContext";
 import "./App.css";
 
+
 function App() {
   return (
     <MouseProvider>
@@ -25,7 +26,7 @@ function App() {
           </Parallax>
         </div>
 
-        <div style={{ position: "absolute", top: "23rem", left: "17rem", mixBlendMode: "difference", width: "40vh" , zIndex:400}}>
+        <div className="text-muz">
           <Parallax speed={0.02} maxMove={30}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/text/muz.svg`}
@@ -36,7 +37,7 @@ function App() {
         </div>
 
 
-        <div style={{ position: "absolute", top: "27rem", right: "17rem", mixBlendMode: "difference", width: "40vh" , zIndex:400}}>
+        <div className="text-ish">
           <Parallax speed={0.02} maxMove={30}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/text/ish.svg`}
@@ -47,7 +48,7 @@ function App() {
         </div>
 
 
-        <div style={{ position: "absolute", top: "37rem", left: "50%", transform: "translateX(-50%)", mixBlendMode: "difference", width: "30vh" , zIndex:700}}>
+        <div className="text-reliz">
           <Parallax speed={0.02} maxMove={30}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/text/reliz.svg`}
@@ -63,7 +64,7 @@ function App() {
               src={`${process.env.PUBLIC_URL}/assets/simian-no-bg.png`}
               alt="Simian"
               // className="center-image"
-              style={{ width: "100vh", height: "auto", bottom: "0px", marginBottom: "10px", mixBlendMode: "difference" }}
+              style={{ height: "105vh", width: "auto", bottom: "0px", marginBottom: "10px", mixBlendMode: "difference" }}
             />
           </Parallax>
         </div>
