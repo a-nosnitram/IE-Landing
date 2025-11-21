@@ -5,7 +5,7 @@ import "./OrbitingText.css";
 const OrbitingText = ({
   src,
   alt,
-  radius = 200,
+  radiusVw = 15,
   speed = 1,
   parallaxSpeed = 0.01,
   startAngle = 0,
@@ -24,6 +24,9 @@ const OrbitingText = ({
     return () => clearInterval(intervalId);
   }, [speed, direction]);
 
+  // Convert vw to pixels
+  const radius = (radiusVw * window.innerWidth) / 100;
+
   const x = Math.cos((angle * Math.PI) / 180) * radius * ellipseRatio;
   const y = Math.sin((angle * Math.PI) / 180) * radius;
 
@@ -34,7 +37,7 @@ const OrbitingText = ({
         left: "50%",
         top: "50%",
         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-        width: `${size}px`,
+        width: "15vw",
       }}
     >
       <Parallax speed={parallaxSpeed} maxMove={20}>

@@ -142,7 +142,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/cosm.svg`}
               alt="cosm"
-              radius={1}
+              radiusVw={0}
               speed={0}
               startAngle={0}
               size={180}
@@ -152,7 +152,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/imperia.svg`}
               alt="imperia"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={60}
               size={200}
@@ -162,7 +162,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/intrigi.svg`}
               alt="intrigi"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={120}
               size={170}
@@ -172,7 +172,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/pere.svg`}
               alt="pere"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={180}
               size={160}
@@ -182,7 +182,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/pers.svg`}
               alt="pers"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={240}
               parallaxSpeed={0.03}
@@ -192,7 +192,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/poisk.svg`}
               alt="poisk"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={300}
               size={175}
@@ -202,7 +202,7 @@ function App() {
             <OrbitingText
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/proto.svg`}
               alt="proto"
-              radius={200}
+              radiusvw={15}
               speed={0.8}
               startAngle={360}
               size={180}
