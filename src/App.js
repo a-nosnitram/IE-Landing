@@ -203,7 +203,7 @@ function App() {
               src={`${process.env.PUBLIC_URL}/assets/text/cluster/proto.svg`}
               alt="proto"
               radius={200}
-              speed={0.95}
+              speed={0.8}
               startAngle={320}
               size={180}
               parallaxSpeed={0.05}
