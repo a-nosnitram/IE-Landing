@@ -1,0 +1,5 @@
+.orbiting-text {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
