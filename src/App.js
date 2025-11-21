@@ -8,6 +8,7 @@ import Parallax from "./components/Parallax";
 import ScrollRotate from "./components/ScrollRotate";
 import OrbitingText from "./components/OrbitingText";
 import ScrollRevealText from "./components/ScrollRevealText";
+import CharacterCarousel from "./components/Carousel";
 import { MouseProvider } from "./context/MouseContext";
 import "./App.css";
 
@@ -250,6 +251,7 @@ function App() {
         {/* carousel */}
         <section className="section-five">
           <div className="top-ombre" style={{ zIndex: 10 }}></div>
+          <CharacterCarousel />
         </section>
       </div>
     </MouseProvider>
