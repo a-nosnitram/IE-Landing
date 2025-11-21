@@ -7,6 +7,7 @@ import GradientOverlay from "./components/GradientOverlay";
 import Parallax from "./components/Parallax";
 import ScrollRotate from "./components/ScrollRotate";
 import OrbitingText from "./components/OrbitingText";
+import ScrollRevealText from "./components/ScrollRevealText";
 import { MouseProvider } from "./context/MouseContext";
 import "./App.css";
 
@@ -211,6 +212,22 @@ function App() {
             />
           </div>
         </section>
+
+        {/* summary */}
+        <section className="section-three">
+          <ScrollRevealText
+            text="Следователю особого подразделения Фэмеру в качестве наказания поручают нераскрытые дела и урезают зарплату. Мечтая выкупить дом своего детства, он расследует убийство принца"
+            className="summary-text"
+          />
+        </section>
+        <section className="section-three">
+          <ScrollRevealText
+            text="...и оказывается втянут в заговор древнего культа."
+            className="summary-text"
+          />
+        </section>
+
+        <section className="section-four"></section>
       </div>
     </MouseProvider>
   );
