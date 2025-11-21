@@ -154,7 +154,7 @@ function App() {
               alt="imperia"
               radius={200}
               speed={0.8}
-              startAngle={51}
+              startAngle={60}
               size={200}
               parallaxSpeed={0.04}
               direction="clockwise"
@@ -164,7 +164,7 @@ function App() {
               alt="intrigi"
               radius={200}
               speed={0.8}
-              startAngle={103}
+              startAngle={120}
               size={170}
               parallaxSpeed={0.03}
               direction="clockwise"
@@ -174,7 +174,7 @@ function App() {
               alt="pere"
               radius={200}
               speed={0.8}
-              startAngle={154}
+              startAngle={180}
               size={160}
               parallaxSpeed={0.05}
               direction="clockwise"
@@ -184,7 +184,7 @@ function App() {
               alt="pers"
               radius={200}
               speed={0.8}
-              startAngle={206}
+              startAngle={240}
               parallaxSpeed={0.03}
               size={190}
               direction="clockwise"
@@ -194,7 +194,7 @@ function App() {
               alt="poisk"
               radius={200}
               speed={0.8}
-              startAngle={257}
+              startAngle={300}
               size={175}
               parallaxSpeed={0.03}
               direction="clockwise"
@@ -204,7 +204,7 @@ function App() {
               alt="proto"
               radius={200}
               speed={0.8}
-              startAngle={320}
+              startAngle={360}
               size={180}
               parallaxSpeed={0.05}
               direction="clockwise"
