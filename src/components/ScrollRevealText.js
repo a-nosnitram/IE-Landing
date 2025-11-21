@@ -66,7 +66,7 @@ const ScrollRevealText = ({ text, className = "" }) => {
       window.removeEventListener("scroll", handleScroll);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [words.length]);
+  }, [words, words.length]);
 
   return (
     <div ref={containerRef} className={`scroll-reveal-text ${className}`}>
