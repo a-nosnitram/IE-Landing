@@ -8,15 +8,15 @@ const ScrollRevealText = ({ text, className = "" }) => {
 
   useEffect(() => {
     let rafId;
-    let lastScrollY = window.scrollY;
+    // let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      //   const currentScrollY = window.scrollY;
 
       // only update if scroll changed significantly (less unnecessary updates?)
       //   if (Math.abs(currentScrollY - lastScrollY) < 5 && rafId) return;
 
-      lastScrollY = currentScrollY;
+      //   lastScrollY = currentScrollY;
 
       if (rafId) {
         cancelAnimationFrame(rafId);
