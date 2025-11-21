@@ -246,6 +246,11 @@ function App() {
             ></div>
           </div>
         </section>
+
+        {/* carousel */}
+        <section className="section-five">
+          <div className="top-ombre" style={{ zIndex: 10 }}></div>
+        </section>
       </div>
     </MouseProvider>
   );
