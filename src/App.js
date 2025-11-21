@@ -225,9 +225,27 @@ function App() {
             text="...и оказывается втянут в заговор древнего культа."
             className="summary-text"
           />
+          <div className="bottom-ombre" style={{ zIndex: 10 }}></div>
         </section>
 
-        <section className="section-four"></section>
+        {/* trailer video */}
+        <section className="section-four">
+          <div className="trailer-container">
+            <div className="top-ombre" style={{ zIndex: 10 }}></div>
+            <video
+              src={`${process.env.PUBLIC_URL}/assets/trailer.mp4`}
+              className="trailer-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+            <div
+              className="bottom-ombre"
+              style={{ zIndex: 10, marginBottom: "0px" }}
+            ></div>
+          </div>
+        </section>
       </div>
     </MouseProvider>
   );
