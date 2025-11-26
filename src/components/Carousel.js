@@ -116,7 +116,7 @@ export default function CharacterCarousel() {
       });
     }
     return base;
-  }, [dir, leftIdx, centerIdx, rightIdx]);
+  }, [dir, leftIdx, centerIdx, rightIdx, n]);
 
   const getClass = (slot) => {
     if (!dir) return slotClass[slot].atRest;
