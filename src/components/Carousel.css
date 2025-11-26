@@ -10,10 +10,9 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    /* top: 20vh; */
     left: 50%;
     transform: translateX(-50%);
-    /* overflow: hidden; */
+    z-index: 50;
 }
 
 .carousel-arrow {
@@ -99,7 +98,7 @@
 .character-card h3 {
     margin: 0;
     color: #eaeaea;
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: 700;
     letter-spacing: 0.5px;
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -109,8 +108,8 @@
 
 .carousel-description {
     text-align: center;
-    font-size: 4vw;
-    max-width: 30vw;
+    font-size: 3vw;
+    max-width: 40vw;
     padding: 2.5rem;
     position: relative;
     margin-top: 10vh;
@@ -119,6 +118,7 @@
     opacity: 1;
     transform: translateY(0);
     transition: all 0.3s ease-out;
+    z-index: 10;
 }
 
 .carousel-description h4 {
@@ -167,6 +167,8 @@
     opacity: 1;
     transform: translateY(0);
     transition: all 0.2s ease-out;
+    padding-right: 5vw;
+    padding-left: 5vw;
 }
 
 .carousel-description.transitioning p {

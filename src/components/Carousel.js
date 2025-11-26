@@ -4,41 +4,73 @@ import "./Carousel.css";
 const carItems = [
   {
     id: "character-1",
-    title: "Аренда",
-    description: "блаблаблаблаблаблабла балалулав вовррв ры ырытфымвоппы ывм.",
+    title: "Эарендель Левайятан",
+    description: "новый Император, основатель учёного ордена «Утренняя звезда»",
     image: `${process.env.PUBLIC_URL}/assets/car1.png`,
   },
   {
     id: "character-2",
-    title: "Самаэль",
-    description: " арвп вагврв рыви ыввну варвиа.",
+    title: "самаэль Левайятан",
+    description: "Безумный принц, на чьих идеях основан культ Деяний",
     image: `${process.env.PUBLIC_URL}/assets/car2.png`,
   },
   {
     id: "character-3",
-    title: "Дейлила",
-    description: "гага у ля ля ра ма ра ма ма-а га га у ла ла тара бэд ромэнс",
+    title: "Дэйлила гарднемс",
+    description: "Журналистка,автор блога «Завистливая Сплетница»",
     image: `${process.env.PUBLIC_URL}/assets/car3.png`,
+  },
+  {
+    id: "character-4",
+    title: "фэмер кёр",
+    description: "Следователь из подразделения Грёз O Контакте, пироман",
+    image: `${process.env.PUBLIC_URL}/assets/car4.jpg`,
+  },
+  {
+    id: "character-5",
+    title: "ан крайц",
+    description: "«Жемчужная герцогиня», глава подразделения Грёз O Чуде",
+    image: `${process.env.PUBLIC_URL}/assets/car5.jpg`,
+  },
+  {
+    id: "character-6",
+    title: "наф",
+    description: "хозяйка императорского ритуального бюро «а-эйдос»",
+    image: `${process.env.PUBLIC_URL}/assets/car6.jpg`,
+  },
+  {
+    id: "character-7",
+    title: "шимиан и уайт",
+    description: "Великая императорская чета, «Царственные тьма и свет»",
+    image: `${process.env.PUBLIC_URL}/assets/shimian-and-white.jpeg`,
+  },
+  {
+    id: "character-8",
+    title: "сияние",
+    description: "Глава организации «Грёзы», сильнейшая обладательница Ками",
+    image: `${process.env.PUBLIC_URL}/assets/car8.png`,
   },
 ];
 
 export default function CharacterCarousel() {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(0);
   const [dir, setDir] = useState(null);
   const [run, setRun] = useState(false);
   const [entering, setEntering] = useState(false);
 
-  const rightIdx = (current + carItems.length - 1) % carItems.length;
+  const n = carItems.length;
   const centerIdx = current;
-  const leftIdx = (current + 1) % carItems.length;
+  const leftIdx = (current - 1 + n) % n;
+  const rightIdx = (current + 1) % n;
 
   const goRight = () => {
     if (dir) return;
     setDir("right");
     setEntering(false);
+    // kick off the CSS transition in next frame
     requestAnimationFrame(() => setRun(true));
     setTimeout(() => {
-      setCurrent(rightIdx);
+      setCurrent((c) => (c + 1) % n);
       setDir(null);
       setRun(false);
       setEntering(true);
@@ -52,7 +84,7 @@ export default function CharacterCarousel() {
     setEntering(false);
     requestAnimationFrame(() => setRun(true));
     setTimeout(() => {
-      setCurrent(leftIdx);
+      setCurrent((c) => (c - 1 + n) % n);
       setDir(null);
       setRun(false);
       setEntering(true);
@@ -67,17 +99,20 @@ export default function CharacterCarousel() {
       { key: `R-${carItems[rightIdx].id}`, idx: rightIdx, slot: "right" },
     ];
 
-    if (dir === "left") {
+    // include a ghost element coming from the direction of motion
+    if (dir === "right") {
+      const nextRight = (rightIdx + 1) % n;
       base.push({
-        key: `G-R-${carItems[leftIdx].id}`,
-        idx: rightIdx,
-        slot: "ghost-enter-left",
-      });
-    } else if (dir === "right") {
-      base.push({
-        key: `G-L-${carItems[rightIdx].id}`,
-        idx: leftIdx,
+        key: `G-R-${carItems[nextRight].id}`,
+        idx: nextRight,
         slot: "ghost-enter-right",
+      });
+    } else if (dir === "left") {
+      const prevLeft = (leftIdx - 1 + n) % n;
+      base.push({
+        key: `G-L-${carItems[prevLeft].id}`,
+        idx: prevLeft,
+        slot: "ghost-enter-left",
       });
     }
     return base;
@@ -87,12 +122,11 @@ export default function CharacterCarousel() {
     if (!dir) return slotClass[slot].atRest;
 
     if (dir === "left") {
-      if (!run) return slotClassRight.start[slot];
-      return slotClassRight.end[slot];
-    } else {
-      // dir === 'left'
       if (!run) return slotClassLeft.start[slot];
       return slotClassLeft.end[slot];
+    } else {
+      if (!run) return slotClassRight.start[slot];
+      return slotClassRight.end[slot];
     }
   };
 
@@ -176,22 +210,6 @@ const slotClassRight = {
     left: "pos-left",
     center: "pos-center",
     right: "pos-right",
-    "ghost-enter-left": "off-left", // ghost starts off-screen left
-  },
-  end: {
-    left: "to-center",
-    center: "to-right",
-    right: "to-off-right",
-    "ghost-enter-left": "to-left",
-  },
-};
-
-const slotClassLeft = {
-  // When clicking LEFT: everything moves to the LEFT.
-  start: {
-    left: "pos-left",
-    center: "pos-center",
-    right: "pos-right",
     "ghost-enter-right": "off-right",
   },
   end: {
@@ -199,5 +217,20 @@ const slotClassLeft = {
     center: "to-left",
     right: "to-center",
     "ghost-enter-right": "to-right",
+  },
+};
+
+const slotClassLeft = {
+  start: {
+    left: "pos-left",
+    center: "pos-center",
+    right: "pos-right",
+    "ghost-enter-left": "off-left",
+  },
+  end: {
+    left: "to-center",
+    center: "to-right",
+    right: "to-off-right",
+    "ghost-enter-left": "to-left",
   },
 };
