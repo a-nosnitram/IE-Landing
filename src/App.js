@@ -402,36 +402,20 @@ function App() {
 
         {/* carousel */}
         <section className="section-five">
-          <div
-            className="top-ombre"
-            id="top-ombre-one"
-            style={{ zIndex: 10 }}
-          ></div>
+          <div className="top-ombre" style={{ zIndex: 10 }}></div>
           {isMobile ? <EventsCarouselMobile /> : <CharacterCarousel />}
-          <div
-            className="bottom-ombre"
-            id="bottom-ombre-one"
-            style={{ zIndex: 0 }}
-          ></div>
+          <div className="bottom-ombre" style={{ zIndex: 0 }}></div>
         </section>
 
         <section className="section-six">
           <div>
-            <div
-              className="top-ombre"
-              id="top-ombre-one"
-              style={{ zIndex: 10 }}
-            ></div>
+            <div className="top-ombre" style={{ zIndex: 10 }}></div>
             <img
               src={`${process.env.PUBLIC_URL}/assets/section-6-bg.jpg`}
               alt="Section 6 Background"
               className="section-six-bg"
             />
-            <div
-              className="bottom-ombre"
-              id="bottom-ombre-one"
-              style={{ zIndex: 10 }}
-            ></div>
+            <div className="bottom-ombre" style={{ zIndex: 10 }}></div>
           </div>
         </section>
       </div>
