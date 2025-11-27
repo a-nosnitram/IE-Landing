@@ -61,9 +61,7 @@ const AuthorPanel = forwardRef(function AuthorPanel(props, ref) {
           <h1 className="author-name">Ксения W Маничевская</h1>
           <h3 className="author-sub">Писатель, актриса, мистик</h3>
 
-          <h4 className="section-title">
-            Автор фэнтези‑трилогии «Исповедь Шимиан»
-          </h4>
+          <h4>Автор фэнтези‑трилогии «Исповедь Шимиан»</h4>
           <ul className="author-list">
             <li>
               Победитель Всероссийского литературного детско‑юношеского конкурса
@@ -82,7 +80,7 @@ const AuthorPanel = forwardRef(function AuthorPanel(props, ref) {
 
         {/* Row 2: text | picture */}
         <div className="grid-item grid-text">
-          <h4 className="section-title">Актриса, снявшаяся в 15+ проектах</h4>
+          <h4>Актриса, снявшаяся в 15+ проектах</h4>
           <ul className="author-list">
             <li>Приз за лучшую женскую роль в фильме «Бог есть»</li>
             <li>
@@ -93,7 +91,7 @@ const AuthorPanel = forwardRef(function AuthorPanel(props, ref) {
               петух и сто цветов», 2023
             </li>
           </ul>
-          <h5>Мастер настольных ролевых игр с 2023 года</h5>
+          <h4>Мастер настольных ролевых игр с 2023 года</h4>
           <ul className="author-list">
             <li>«Dungeons & Dragons»</li>
             <li>«Delta Green»</li>

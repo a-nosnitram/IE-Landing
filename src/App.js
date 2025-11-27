@@ -9,13 +9,17 @@ import ScrollRotate from "./components/ScrollRotate";
 import OrbitingText from "./components/OrbitingText";
 import ScrollRevealText from "./components/ScrollRevealText";
 import CharacterCarousel from "./components/Carousel";
+import EventsCarouselMobile from "./components/CarouselMobile";
 import AuthorPanel from "./components/AuthorPanel";
 import { MouseProvider } from "./context/MouseContext";
 import "./App.css";
+import "./App.mobile.css";
 
 function App() {
+  const isMobile = window.innerWidth <= 768;
   const trailerRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
+  const ombreClassName = isMobile ? "mobile-ombre" : "desktop-ombre";
 
   useEffect(() => {
     if (trailerRef.current) {
@@ -41,8 +45,7 @@ function App() {
           <CosmicBackground />
           <CosmicParticles count={50} />
           <CursorLight />
-
-          <EyeGrid spacing={40} offsetX={10} offsetY={10} />
+          {!isMobile && <EyeGrid spacing={40} offsetX={10} offsetY={10} />}
 
           <div className="top-text-content">
             <Parallax style={{ marginTop: "-100px" }} speed={0.01} maxMove={30}>
@@ -50,21 +53,22 @@ function App() {
             </Parallax>
           </div>
 
-          <div className="text-muz">
-            <Parallax speed={0.02} maxMove={30}>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/text/avtor.svg`}
-                alt="avtor"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
-                  mixBlendMode: "difference",
-                }}
-              />
-            </Parallax>
-          </div>
-
+          {!isMobile && (
+            <div className="text-muz">
+              <Parallax speed={0.02} maxMove={30}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/text/avtor.svg`}
+                  alt="avtor"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                    mixBlendMode: "difference",
+                  }}
+                />
+              </Parallax>
+            </div>
+          )}
           <div className="text-pis">
             <Parallax speed={0.02} maxMove={30}>
               <img
@@ -120,13 +124,7 @@ function App() {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/simian-no-bg.png`}
                 alt="Simian"
-                style={{
-                  height: "105vh",
-                  width: "auto",
-                  bottom: "0px",
-                  marginBottom: "10px",
-                  mixBlendMode: "difference",
-                }}
+                className="shining"
               />
             </Parallax>
           </div>
@@ -159,14 +157,18 @@ function App() {
         </section>
 
         <section className="section-one">
-          <div className="top-ombre"></div>
+          <div className="top-ombre" id="top-ombre-one"></div>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/assets/section-1-bg.png`}
               alt="Section 1 Background"
               className="section-one-bg"
             />
-            <div className="bottom-ombre" style={{ zIndex: 10 }}></div>
+            <div
+              className="bottom-ombre"
+              id="bottom-ombre-one"
+              style={{ zIndex: 10 }}
+            ></div>
           </div>
 
           <div className="ish-book">
@@ -209,79 +211,107 @@ function App() {
         </section>
 
         <section className="section-two">
-          <div className="top-ombre" style={{ zIndex: 10 }}></div>
-          <div className="cosmic-cluster">
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/cosm.svg`}
-              alt="cosm"
-              radiusVw={0}
-              speed={0}
-              startAngle={0}
-              size={180}
-              parallaxSpeed={0.09}
-              direction="counter-clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/imperia.svg`}
-              alt="imperia"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={60}
-              size={200}
-              parallaxSpeed={0.04}
-              direction="clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/intrigi.svg`}
-              alt="intrigi"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={120}
-              size={170}
-              parallaxSpeed={0.03}
-              direction="clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/pere.svg`}
-              alt="pere"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={180}
-              size={160}
-              parallaxSpeed={0.05}
-              direction="clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/pers.svg`}
-              alt="pers"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={240}
-              parallaxSpeed={0.03}
-              size={190}
-              direction="clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/poisk.svg`}
-              alt="poisk"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={300}
-              size={175}
-              parallaxSpeed={0.03}
-              direction="clockwise"
-            />
-            <OrbitingText
-              src={`${process.env.PUBLIC_URL}/assets/text/cluster/proto.svg`}
-              alt="proto"
-              radiusvw={15}
-              speed={0.8}
-              startAngle={360}
-              size={180}
-              parallaxSpeed={0.05}
-              direction="clockwise"
-            />
-          </div>
+          <div
+            className="top-ombre"
+            id="top-ombre-one"
+            style={{ zIndex: 10 }}
+          ></div>
+          {/* Cosmic cluster: orbiting on desktop, simplified parallax grid on mobile */}
+          {isMobile ? (
+            <div className="cosmic-cluster mobile">
+              {[
+                "cosm.svg",
+                "imperia.svg",
+                "intrigi.svg",
+                "pere.svg",
+                "pers.svg",
+                "poisk.svg",
+                "proto.svg",
+              ].map((name, idx) => (
+                <div className="cluster-item" key={name}>
+                  <Parallax speed={0.01 + (idx % 3) * 0.01} maxMove={12}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/text/cluster/${name}`}
+                      alt={name.replace(".svg", "")}
+                    />
+                  </Parallax>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="cosmic-cluster">
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/cosm.svg`}
+                alt="cosm"
+                radiusVw={0}
+                speed={0}
+                startAngle={0}
+                size={180}
+                parallaxSpeed={0.09}
+                direction="counter-clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/imperia.svg`}
+                alt="imperia"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={60}
+                size={200}
+                parallaxSpeed={0.04}
+                direction="clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/intrigi.svg`}
+                alt="intrigi"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={120}
+                size={170}
+                parallaxSpeed={0.03}
+                direction="clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/pere.svg`}
+                alt="pere"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={180}
+                size={160}
+                parallaxSpeed={0.05}
+                direction="clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/pers.svg`}
+                alt="pers"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={240}
+                parallaxSpeed={0.03}
+                size={190}
+                direction="clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/poisk.svg`}
+                alt="poisk"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={300}
+                size={175}
+                parallaxSpeed={0.03}
+                direction="clockwise"
+              />
+              <OrbitingText
+                src={`${process.env.PUBLIC_URL}/assets/text/cluster/proto.svg`}
+                alt="proto"
+                radiusvw={15}
+                speed={0.8}
+                startAngle={360}
+                size={180}
+                parallaxSpeed={0.05}
+                direction="clockwise"
+              />
+            </div>
+          )}
         </section>
 
         {/* Floating back button for author panel (keeps it outside transformed panel) */}
@@ -312,13 +342,21 @@ function App() {
             text="...и оказывается втянут в заговор древнего культа."
             className="summary-text"
           />
-          <div className="bottom-ombre" style={{ zIndex: 10 }}></div>
+          <div
+            className="bottom-ombre"
+            id="bottom-ombre-one"
+            style={{ zIndex: 10 }}
+          ></div>
         </section>
 
         {/* trailer video */}
         <section className="section-four">
           <div className="trailer-container">
-            <div className="top-ombre" style={{ zIndex: 10 }}></div>
+            <div
+              className="top-ombre"
+              id="top-ombre-one"
+              style={{ zIndex: 10 }}
+            ></div>
             {/* Trailer video with sound toggle */}
             <video
               ref={trailerRef}
@@ -357,6 +395,7 @@ function App() {
 
             <div
               className="bottom-ombre"
+              id="bottom-ombre-one"
               style={{ zIndex: 10, marginBottom: "0px" }}
             ></div>
           </div>
@@ -364,20 +403,36 @@ function App() {
 
         {/* carousel */}
         <section className="section-five">
-          <div className="top-ombre" style={{ zIndex: 10 }}></div>
-          <CharacterCarousel />
-          <div className="bottom-ombre" style={{ zIndex: 0 }}></div>
+          <div
+            className="top-ombre"
+            id="top-ombre-one"
+            style={{ zIndex: 10 }}
+          ></div>
+          {isMobile ? <EventsCarouselMobile /> : <CharacterCarousel />}
+          <div
+            className="bottom-ombre"
+            id="bottom-ombre-one"
+            style={{ zIndex: 0 }}
+          ></div>
         </section>
 
         <section className="section-six">
           <div>
-            <div className="top-ombre" style={{ zIndex: 10 }}></div>
+            <div
+              className="top-ombre"
+              id="top-ombre-one"
+              style={{ zIndex: 10 }}
+            ></div>
             <img
               src={`${process.env.PUBLIC_URL}/assets/section-6-bg.jpg`}
               alt="Section 6 Background"
               className="section-six-bg"
             />
-            <div className="bottom-ombre" style={{ zIndex: 10 }}></div>
+            <div
+              className="bottom-ombre"
+              id="bottom-ombre-one"
+              style={{ zIndex: 10 }}
+            ></div>
           </div>
         </section>
       </div>

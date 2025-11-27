@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "./Carousel.css";
 
-const carItems = [
+export const carItems = [
   {
     id: "character-1",
     title: "Эарендель Левайятан",
