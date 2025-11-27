@@ -3,9 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useRef } from "react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 import { carItems } from "./Carousel";
 import "./CarouselMobile.css";
@@ -17,7 +16,6 @@ const eventTypes = carItems.slice(0, 5).map((it) => ({
   description: it.description,
   image: it.image,
 }));
-
 
 function EventsCarouselMobile() {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -19,7 +19,6 @@ function App() {
   const isMobile = window.innerWidth <= 768;
   const trailerRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
-  const ombreClassName = isMobile ? "mobile-ombre" : "desktop-ombre";
 
   useEffect(() => {
     if (trailerRef.current) {
