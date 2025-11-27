@@ -130,12 +130,13 @@
 }
 
 .litnet-text {
-  width: 36vw;
+  width: 30vw;
   height: auto;
   position: absolute;
   bottom:0;
   left: 52vw;
   z-index: 20;
+  overflow: visible;
 }
 
 .cluster-text {

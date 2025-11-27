@@ -187,17 +187,23 @@ function App() {
           </div>
           <div className="litnet-text">
             <Parallax speed={0.01} maxMove={30}>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/text/litnet.svg`}
-                alt="litnet"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  display: "block",
-                  zIndex: "20",
-                  mixBlendMode: "difference",
-                }}
-              />
+              <a
+                href="https://litnet.com/ru/kseniya-w-manichevskaya-u12708312"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/text/litnet.svg`}
+                  alt="litnet"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                    zIndex: "20",
+                    mixBlendMode: "difference",
+                  }}
+                />
+              </a>
             </Parallax>
           </div>
         </section>

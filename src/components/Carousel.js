@@ -17,7 +17,7 @@ const carItems = [
   {
     id: "character-3",
     title: "Дэйлила гарднемс",
-    description: "Журналистка,автор блога «Завистливая Сплетница»",
+    description: "Журналистка, автор блога «Завистливая Сплетница»",
     image: `${process.env.PUBLIC_URL}/assets/car3.png`,
   },
   {
@@ -42,13 +42,13 @@ const carItems = [
     id: "character-7",
     title: "шимиан и уайт",
     description: "Великая императорская чета, «Царственные тьма и свет»",
-    image: `${process.env.PUBLIC_URL}/assets/shimian-and-white.jpeg`,
+    image: `${process.env.PUBLIC_URL}/assets/shimian-and-white.jpg`,
   },
   {
     id: "character-8",
     title: "сияние",
     description: "Глава организации «Грёзы», сильнейшая обладательница Ками",
-    image: `${process.env.PUBLIC_URL}/assets/car8.png`,
+    image: `${process.env.PUBLIC_URL}/assets/car8.jpg`,
   },
 ];
 
