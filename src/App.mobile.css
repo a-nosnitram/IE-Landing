@@ -32,7 +32,7 @@
   /* Keyframes and per-item vars are defined later near the cluster block */
   .author-footer {
     width: 100% !important;
-    margin: 4vw 0 10vh 0 !important;
+    margin: 4vw 0 10lvh 0 !important;
     padding-left: 6vw !important;
     padding-right: 6vw !important;
     padding-top: 1rem !important;
@@ -63,7 +63,7 @@
   }
 
   .down-arrow {
-    top: calc(70vh) !important;
+    top: calc(70lvh) !important;
   }
 
   /* Improve paragraph and list readability on mobile */
@@ -83,7 +83,7 @@
   /* LANDING SECTION TOP */
   .hero-section {
     width: 100vw;
-    height: 100vh;
+    height: 100lvh;
     position: relative;
     overflow: hidden;
   }
@@ -98,7 +98,7 @@
   }
 
   .shining {
-    height: 100vh;
+    height: 100lvh;
     width: auto;
     bottom: 0px;
     margin-bottom: 10px;
@@ -120,14 +120,14 @@
     font-size: 12vw;
     font-weight: 500;
     line-height: 0.8;
-    margin-top: 30vh;
+    margin-top: 30lvh;
     text-align: center;
     color: rgb(255, 255, 255);
   }
 
   .text-muz {
     position: absolute;
-    top: 48vh;
+    top: 48lvh;
     left: 5vw;
     width: 40vw;
     mix-blend-mode: difference;
@@ -135,7 +135,7 @@
   }
   .text-pis {
     position: absolute;
-    top: 49vh;
+    top: 49lvh;
     left: 50%;
     transform: translateX(-50%);
     width: 50vw;
@@ -144,7 +144,7 @@
   }
   .text-vmir {
     position: absolute;
-    top: 70vh;
+    top: 70lvh;
     width: 50vw;
     left: 50%;
     transform: translateX(-50%);
@@ -157,7 +157,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40vh;
+    height: 40lvh;
     background: linear-gradient(to top, #000000 0%, transparent 100%);
     pointer-events: none;
     z-index: 699;
@@ -167,29 +167,29 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 30vh;
+    height: 30lvh;
     background: linear-gradient(to bottom, #000000 0%, transparent 100%);
     pointer-events: none;
     z-index: 699;
   }
 
   #top-ombre-one {
-    height: 10vh;
+    height: 10lvh;
   }
 
   #bottom-ombre-one {
-    height: 10vh;
+    height: 10lvh;
   }
 
   .section-one {
     width: 100vw;
-    height: 40vh;
+    height: 40lvh;
     position: relative;
   }
 
   .section-two {
     width: 100vw;
-    height: 130vh;
+    height: 130lvh;
     position: relative;
     overflow: hidden;
   }
@@ -218,11 +218,11 @@
     position: absolute;
     bottom: 0;
     z-index: 20;
-    top: 50vh;
+    top: 50lvh;
   }
   .section-three {
     width: 100vw;
-    height: 50vh;
+    height: 50lvh;
     position: relative;
     display: flex;
     font-size: 5vw !important;
@@ -235,7 +235,7 @@
 
   .section-four {
     width: 100vw;
-    height: 40vh !important;
+    height: 40lvh !important;
     position: relative;
   }
   .trailer-container {
@@ -245,7 +245,7 @@
   .video-sound-btn {
     position: absolute;
     right: clamp(3vw, 4vw, 6vw);
-    bottom: clamp(6vh, 8vh, 10vh);
+    bottom: clamp(6lvh, 8lvh, 10lvh);
     width: clamp(3.2vw, 4vw, 5.2vw);
     height: clamp(3.2vw, 4vw, 5.2vw);
     border-radius: 50%;
@@ -276,14 +276,14 @@
 
   .section-five {
     width: 100vw;
-    height: 130vh;
+    height: 130lvh;
     position: relative;
   }
 
   .down-arrow,
   .right-arrow {
     position: absolute;
-    width: 5vh;
+    width: 5lvh;
     height: auto;
     background: transparent;
     border: none;
@@ -300,8 +300,8 @@
   }
   .down-arrow {
     left: 50%;
-    top: 95vh;
-    margin-top: 7vh;
+    top: 95lvh;
+    margin-top: 7lvh;
     transform: translateX(-50%);
   }
   .down-arrow:hover {
@@ -318,13 +318,13 @@
   }
   .right-arrow {
     left: 80%;
-    top: calc(52vh);
+    top: calc(52lvh);
     transform: translateX(-50%) rotate(90deg);
   }
 
   .section-six {
     width: 100vw;
-    height: 50vh !important;
+    height: 50lvh !important;
     position: relative;
     overflow: hidden;
   }
@@ -347,7 +347,7 @@
     width: 44vw;
     height: auto;
     position: absolute;
-    top: 50vh;
+    top: 50lvh;
     left: 14vw;
     z-index: 500;
     padding: 0;
@@ -366,7 +366,7 @@
 
   .section-three {
     width: 100vw;
-    height: 50vh;
+    height: 50lvh;
     position: relative;
     display: flex;
     font-size: 2.5vw;
@@ -379,7 +379,7 @@
 
   .section-four {
     width: 100vw;
-    height: 100vh;
+    height: 100lvh;
     position: relative;
   }
 
@@ -390,7 +390,7 @@
   .video-sound-btn {
     position: absolute;
     right: clamp(3vw, 4vw, 6vw);
-    bottom: clamp(6vh, 8vh, 10vh);
+    bottom: clamp(6lvh, 8lvh, 10lvh);
     width: clamp(3.2vw, 4vw, 5.2vw);
     height: clamp(3.2vw, 4vw, 5.2vw);
     border-radius: 50%;
@@ -422,20 +422,20 @@
 
   .trailer-video {
     width: auto;
-    height: 40vh;
+    height: 40lvh;
     object-fit: cover;
     display: block;
   }
 
   .section-five {
     width: 100vw;
-    height: 80vh;
+    height: 80lvh;
     position: relative;
   }
   .section-six {
-    /* margin-top: 0.15vh; */
+    /* margin-top: 0.15lvh; */
     width: 100vw;
-    height: 100vh;
+    height: 100lvh;
     position: relative;
     overflow: hidden;
   }
@@ -453,7 +453,7 @@
   /* Fixed back arrow placement on mobile */
   .left-arrow {
     left: 4vw !important;
-    top: 6vh !important;
+    top: 6lvh !important;
     transform: rotate(90deg) translateX(0) !important;
     width: clamp(6vw, 10vw, 12vw) !important;
     height: clamp(6vw, 10vw, 12vw) !important;
@@ -484,8 +484,8 @@
     justify-items: center;
     width: min(92%, 1100px);
     /* moved higher within section-two */
-    height: 70vh;
-    top: 60vh;
+    height: 70lvh;
+    top: 60lvh;
     box-sizing: border-box;
     pointer-events: none;
     z-index: 30;
@@ -512,10 +512,10 @@
   }
 
   .cosmic-cluster.mobile .cluster-item:nth-child(odd) img {
-    margin-top: 0.8vh;
+    margin-top: 0.8lvh;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(even) img {
-    margin-top: -0.8vh;
+    margin-top: -0.8lvh;
   }
 
   /* Circular float keyframes: approximate a circle with 4-step translations */
@@ -546,7 +546,7 @@
   /* Per-item variations: base horizontal offset (zigzag), radii, duration.
      Odd items use `animation-direction: normal` (clockwise), even use `reverse` (anticlockwise). */
   .cosmic-cluster.mobile .cluster-item:nth-child(1) img {
-    margin-bottom: 8vh;
+    margin-bottom: 8lvh;
     --base-x: -8px;
     --rx: 10px;
     --ry: 6px;
@@ -554,7 +554,7 @@
     animation-direction: normal;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(2) img {
-    margin-top: 8vh;
+    margin-top: 8lvh;
     --base-x: 9px;
     --rx: 9px;
     --ry: 7px;
@@ -562,7 +562,7 @@
     animation-direction: reverse;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(3) img {
-    margin-bottom: 8vh;
+    margin-bottom: 8lvh;
     --base-x: -6px;
     --rx: 8px;
     --ry: 5px;
@@ -570,7 +570,7 @@
     animation-direction: normal;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(4) img {
-    margin-top: 8vh;
+    margin-top: 8lvh;
     --base-x: 7px;
     --rx: 9px;
     --ry: 6px;
@@ -579,7 +579,7 @@
     width: 30vw !important;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(5) img {
-    margin-bottom: 8vh;
+    margin-bottom: 8lvh;
     --base-x: -12px;
     --rx: 11px;
     --ry: 7px;
@@ -588,7 +588,7 @@
     width: 35vw !important;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(6) img {
-    margin-top: 8vh;
+    margin-top: 8lvh;
     --base-x: 11px;
     --rx: 10px;
     --ry: 8px;
@@ -597,7 +597,7 @@
     width: 30vw !important;
   }
   .cosmic-cluster.mobile .cluster-item:nth-child(7) img {
-    margin-bottom: 8vh;
+    margin-bottom: 8lvh;
     --base-x: -8px;
     --rx: 9px;
     --ry: 6px;
