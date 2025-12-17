@@ -126,16 +126,6 @@
   display: block;
 }
 
-.ish-book {
-  width: 44vw;
-  height: auto;
-  position: absolute;
-  top: 50vh;
-  left: 14vw;
-  z-index: 500;
-  padding: 0;
-  margin: 0;
-}
 .litnet-text {
   width: 36vw;
   height: auto;
@@ -304,11 +294,11 @@
 }
 
 .ish-book {
-  width: 44vw;
+  width: 40vw;
   height: auto;
   position: absolute;
   top: 50vh;
-  left: 14vw;
+  left: 15vw;
   z-index: 500;
   padding: 0;
   margin: 0;

@@ -1,5 +1,3 @@
-/* Mobile overrides for small screens */
-
 @media (max-width: 720px) {
   /* Reduce app padding/overflow behavior on mobile */
   .App {
@@ -201,15 +199,6 @@
     display: block;
   }
 
-  .ish-book {
-    width: 60vw !important;
-    height: auto;
-    position: absolute;
-    left: 20vw !important;
-    z-index: 500;
-    padding: 0;
-    margin-left: 50vw;
-  }
   .litnet-text {
     width: 60vw !important;
     left: 50%;
@@ -344,11 +333,11 @@
   }
 
   .ish-book {
-    width: 44vw;
+    width: 50vw;
     height: auto;
     position: absolute;
-    top: 50lvh;
-    left: 14vw;
+    top: 52lvh;
+    left: 22vw;
     z-index: 500;
     padding: 0;
     margin: 0;
