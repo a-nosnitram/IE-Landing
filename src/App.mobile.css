@@ -343,16 +343,6 @@
     margin: 0;
   }
 
-  .litnet-text {
-    width: 30vw;
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 52vw;
-    z-index: 20;
-    overflow: visible;
-  }
-
   .section-three {
     width: 100vw;
     height: 50lvh;

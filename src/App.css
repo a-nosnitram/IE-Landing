@@ -302,6 +302,8 @@
   z-index: 500;
   padding: 0;
   margin: 0;
+  /* shadow */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
 }
 
 .litnet-text {
@@ -309,7 +311,7 @@
   height: auto;
   position: absolute;
   bottom: 0;
-  left: 52vw;
+  left: 53vw;
   z-index: 20;
   overflow: visible;
 }
